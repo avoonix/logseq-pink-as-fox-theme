@@ -1,16 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
 
 :root {
-  --background: #282a36;
-  --light-background: #343746;
-  --lighter-background: #424450;
-  --dark-background: #21222c;
-  --darker-background: #191a21;
-  --foreground: #f8f8f2;
-  --current-line: #44475a;
+  --background: #000000;
+  --light-background: #0c0409;
+  --lighter-background: #2c0f23;
+  --dark-background: #000000;
+  --darker-background: #000000;
+  --foreground: #ff55c8;
+  --current-line: #2c0f23;
   --comment: #6272a4;
   --white: var(--foreground);
-  --white-hover: #f8f8f280;
+  --white-hover: #ffd4f1;
   --red: #ff5555;
   --orange: #ffb86c;
   --yellow: #f1fa8c;
@@ -40,7 +40,7 @@ html[data-theme="dark"] {
   --ls-primary-background-color: var(--background);
   --ls-secondary-background-color: var(--dark-background);
   --ls-tertiary-background-color: var(--light-background);
-  --ls-quaternary-background-color: var(--light-background);
+  --ls-quaternary-background-color: var(--lighter-background);
   --ls-quinary-background-color: var(--darker-background);
 
   --ls-active-primary-color: var(--foreground);
@@ -50,7 +50,7 @@ html[data-theme="dark"] {
   --ls-secondary-text-color: var(--white-hover);
 
   --ls-search-background-color: var(--background);
-  --ls-border-color: var(--comment);
+  --ls-border-color: var(--foreground);
   --ls-secondary-border-color: var(--ls-border-color);
   --ls-menu-hover-color: var(--light-background);
   --ls-table-tr-even-background-color: var(--light-background);
@@ -90,7 +90,7 @@ html[data-theme="dark"] {
 
   --ls-icon-color: var(--white-hover);
   --ls-search-icon-color: var(--white-hover);
-  --ls-a-chosen-bg: var(--light-background);
+  --ls-a-chosen-bg: var(--current-line);
   --ls-right-sidebar-code-bg-color: var(--light-background);
   --ls-selection-background-color: var(--comment);
   --ls-slide-background-color: var(--ls-primary-background-color);
@@ -361,6 +361,24 @@ html[data-theme="dark"] #right-sidebar pre.CodeMirror-line {
   background: transparent;
 }
 
+html[data-theme="dark"] .left-sidebar-inner {
+  border-right-color: var(--foreground);
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+html[data-theme="dark"] .left-sidebar-inner {
+  border-right-color: var(--foreground);
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+html[data-theme="dark"] #right-sidebar-container {
+  border-left-color: var(--foreground);
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+
 /* Changes all icons to the same color */
 .ti {
   color: var(--ls-icon-color);
@@ -369,4 +387,19 @@ html[data-theme="dark"] #right-sidebar pre.CodeMirror-line {
 /* Changes sidebar link colors to the same color as the icons */
 .left-sidebar-inner a.item > span {
   color: var(--ls-icon-color);
+}
+
+.ui__button.bg-indigo-600, .ui__toggle .bg-indigo-600 {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+.ui__toggle .switcher {
+  background-color: var(--background);
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3e%3cpath d='M7 7l3-3 3 3m0 6l-3 3-3-3' stroke='%23ff55c8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+  outline-color: var(--white-hover) !important;
+  border-color: var(--foreground) !important;
 }
