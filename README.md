@@ -1,4 +1,4 @@
-# Pink as Fox Theme for Logseq [Logseq](http://logseq.com)
+# Pink as Fox Theme for [Logseq](http://logseq.com)
 
 > A black theme for [Logseq](http://logseq.com) based on [draculatheme.com/logseq](https://draculatheme.com/logseq)
 
