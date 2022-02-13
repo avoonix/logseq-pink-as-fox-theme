@@ -13,9 +13,9 @@
 ### Online install:
 
 - Paste this line to your `logseq/custom.css` file:
-- `@import url('https://cdn.jsdelivr.net/gh/dracula/logseq@master/custom.css');`
+- `@import url('https://cdn.jsdelivr.net/gh/avoonix/logseq-pink-as-fox-theme@master/custom.css');`
 
 OR
 
 - Paste this line to your `logseq/config.edn` file:
-- `:custom-css-url "@import url('https://cdn.jsdelivr.net/gh/dracula/logseq@master/custom.css');"`
+- `:custom-css-url "@import url('https://cdn.jsdelivr.net/gh/avoonix/logseq-pink-as-fox-theme@master/custom.css');"`
