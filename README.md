@@ -1,12 +1,10 @@
-# Dracula for [Logseq](http://logseq.com)
+# Pink as Fox Theme for Logseq [Logseq](http://logseq.com)
 
-> A dark theme for [Logseq](http://logseq.com).
+> A black theme for [Logseq](http://logseq.com) based on [draculatheme.com/logseq](https://draculatheme.com/logseq)
 
 ![Screenshot](./screenshot.png)
 
 ## Install
-
-All instructions can be also found at [draculatheme.com/logseq](https://draculatheme.com/logseq).
 
 ### Offline install:
 
@@ -21,15 +19,3 @@ OR
 
 - Paste this line to your `logseq/config.edn` file:
 - `:custom-css-url "@import url('https://cdn.jsdelivr.net/gh/dracula/logseq@master/custom.css');"`
-  
-## Team
-
-This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/slybouhafs/logseq-dracula/graphs/contributors).
-
-[![Sly Bouhafs](https://github.com/slybouhafs.png?size=100)](https://github.com/slybouhafs) |
---- |
-[Sly Bouhafs](https://github.com/slybouhafs) |
-
-## License
-
-[MIT License](./LICENSE)
