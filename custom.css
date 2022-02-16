@@ -1,26 +1,39 @@
 @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
 
 :root {
-  --background: #000000;
-  --light-background: #0c0409;
-  --lighter-background: #2c0f23;
-  --dark-background: #000000;
-  --darker-background: #000000;
-  --foreground: #ff55c8;
-  --current-line: #2c0f23;
-  --comment: #6272a4;
-  --white: var(--foreground);
-  --white-hover: #ffd4f1;
+  /* hsl colors */
+  --fox-hs-1: 319deg, 100%;
+  --fox-l-1: 67%;
+
+  --fox-hs-2: 320deg, 100%;
+  --fox-l-2: 92%;
+
+  --fox-hs-bg: 0deg, 0%;
+  --fox-l-bg: 0%;
+
+  /* main colors */
+  --fox-background: hsl(var(--fox-hs-bg), var(--fox-l-bg));
+
+  --fox-color-1-lighter: hsl(var(--fox-hs-1), calc(var(--fox-l-1) + 10%));
+  --fox-color-1: hsl(var(--fox-hs-1), var(--fox-l-1));
+  --fox-color-1-darker: hsl(var(--fox-hs-1), calc(var(--fox-l-1) - 10%));
+
+  --fox-border-lighter: hsl(var(--fox-hs-1), calc(var(--fox-l-1) - 40%));
+  --fox-border: hsl(var(--fox-hs-1), calc(var(--fox-l-1) - 50%));
+  --fox-border-darker: hsl(var(--fox-hs-1), calc(var(--fox-l-1) - 60%));
+
+  --fox-color-2-lighter: hsl(var(--fox-hs-2), calc(var(--fox-l-2) + 10%));
+  --fox-color-2: hsl(var(--fox-hs-2), var(--fox-l-2));
+  --fox-color-2-darker: hsl(var(--fox-hs-2), calc(var(--fox-l-2) - 10%));
+
+  /* misc */
   --red: #ff5555;
   --orange: #ffb86c;
   --yellow: #f1fa8c;
   --green: #50fa7b;
   --purple: #bd93f9;
-  --purple-hover: #bf93f980;
   --cyan: #8be9fd;
-  --cyan-hover: #8be9fd80;
   --pink: #ff79c6;
-  --pink-hover: #ff79c680;
 
   --ls-tag-text-opacity: 0.8;
   --ls-tag-text-hover-opacity: 0.8;
@@ -37,62 +50,62 @@
 
 .dark-theme,
 html[data-theme="dark"] {
-  --ls-primary-background-color: var(--background);
-  --ls-secondary-background-color: var(--dark-background);
-  --ls-tertiary-background-color: var(--light-background);
-  --ls-quaternary-background-color: var(--lighter-background);
-  --ls-quinary-background-color: var(--darker-background);
+  --ls-primary-background-color: var(--fox-background);
+  --ls-secondary-background-color: var(--fox-background);
+  --ls-tertiary-background-color: var(--fox-background);
+  --ls-quaternary-background-color: var(--fox-background);
+  --ls-quinary-background-color: var(--fox-background);
 
-  --ls-active-primary-color: var(--foreground);
-  --ls-active-secondary-color: var(--foreground);
+  --ls-active-primary-color: var(--fox-color-1);
+  --ls-active-secondary-color: var(--fox-color-1);
 
-  --ls-primary-text-color: var(--foreground);
+  --ls-primary-text-color: var(--fox-color-1);
   --ls-secondary-text-color: var(--white-hover);
 
-  --ls-search-background-color: var(--background);
-  --ls-border-color: var(--foreground);
-  --ls-secondary-border-color: var(--ls-border-color);
-  --ls-menu-hover-color: var(--light-background);
-  --ls-table-tr-even-background-color: var(--light-background);
+  --ls-search-background-color: var(--fox-background);
+  --ls-border-color: var(--fox-border);
+  --ls-secondary-border-color: var(--fox-border);
+  --ls-menu-hover-color: var(--fox-border-darker);
+  --ls-table-tr-even-background-color: var(--fox-background);
 
-  --ls-head-text-color: var(--foreground);
-  --ls-title-text-color: var(--foreground);
+  --ls-head-text-color: var(--fox-color-1);
+  --ls-title-text-color: var(--fox-color-1);
 
-  --ls-link-text-color: var(--pink);
-  --ls-link-text-hover-color: var(--pink-hover);
+  --ls-link-text-color: var(--fox-color-1);
+  --ls-link-text-hover-color: var(--fox-color-1-darker);
 
-  --ls-link-ref-text-color: var(--pink);
-  --ls-link-ref-text-hover-color: var(--pink-hover);
+  --ls-link-ref-text-color: var(--fox-color-1);
+  --ls-link-ref-text-hover-color: var(--fox-color-1-darker);
   --ls-block-ref-link-text-color: var(--ls-border-color);
 
-  --ls-tag-text-color: var(--purple);
-  --ls-tag-text-hover-color: var(--purple-hover);
+  --ls-tag-text-color: var(--fox-color-1);
+  --ls-tag-text-hover-color: var(--fox-color-1-lighter);
 
-  --ls-block-bullet-border-color: var(--current-line);
-  --ls-block-bullet-color: var(--foreground);
-  --ls-block-highlight-color: var(--current-line);
-  --ls-block-properties-background-color: var(--light-background);
+  --ls-block-bullet-border-color: var(--fox-border);
+  --ls-block-bullet-color: var(--fox-color-1);
+  --ls-block-highlight-color: var(--fox-border-darker);
+  --ls-block-properties-background-color: var(--fox-background);
 
   --ls-page-checkbox-color: transparent;
-  --ls-page-checkbox-border-color: var(--comment);
+  --ls-page-checkbox-border-color: var(--fox-color-1);
 
-  --ls-page-blockquote-color: var(--foreground);
-  --ls-page-blockquote-bg-color: var(--light-background);
-  --ls-page-blockquote-border-color: var(--yellow);
-  --ls-page-properties-background-color: var(--light-background);
+  --ls-page-blockquote-color: var(--fox-color-1);
+  --ls-page-blockquote-bg-color: var(--fox-background);
+  --ls-page-blockquote-border-color: var(--fox-border-lighter);
+  --ls-page-properties-background-color: var(--fox-background);
 
-  --ls-page-inline-code-color: var(--orange);
-  --ls-page-inline-code-bg-color: var(--background);
+  --ls-page-inline-code-color: var(--fox-color-1);
+  --ls-page-inline-code-bg-color: var(--fox-border-darker);
 
-  --ls-scrollbar-background-color: var(--background);
-  --ls-scrollbar-foreground-color: var(--darker-background);
-  --ls-scrollbar-thumb-hover-color: var(--light-background);
+  --ls-scrollbar-background-color: var(--fox-background);
+  --ls-scrollbar-foreground-color: var(--fox-border);
+  --ls-scrollbar-thumb-hover-color: var(--fox-border-lighter);
 
-  --ls-icon-color: var(--white-hover);
-  --ls-search-icon-color: var(--white-hover);
-  --ls-a-chosen-bg: var(--current-line);
-  --ls-right-sidebar-code-bg-color: var(--light-background);
-  --ls-selection-background-color: var(--comment);
+  --ls-icon-color: var(--fox-color-1);
+  --ls-search-icon-color: var(--fox-color-1);
+  --ls-a-chosen-bg: var(--fox-border-darker);
+  --ls-right-sidebar-code-bg-color: var(--fox-background);
+  --ls-selection-background-color: var(--fox-border-darker);
   --ls-slide-background-color: var(--ls-primary-background-color);
   --ls-guideline-color: var(--ls-border-color);
   --color-level-1: var(--ls-secondary-background-color);
@@ -108,15 +121,15 @@ body {
   letter-spacing: var(--ls-font-letter-spacing);
   line-height: var(--ls-font-line-height);
   font-size: var(--ls-page-text-size);
-  background-color: #282a36;
+  background-color: var(--fox-background);
 }
 
 i {
-  color: var(--yellow);
+  color: var(--fox-color-2-darker);
 }
 
 b {
-  color: var(--orange);
+  color: var(--fox-color-2-darker);
 }
 
 mark {
@@ -129,10 +142,13 @@ mark {
 
 .bg-green-600 {
   background-color: var(--green);
+  color: var(--fox-background) !important;
 }
 
-.bg-red-500 {
+.bg-red-500,
+.bg-red-600 {
   background-color: var(--red);
+  color: var(--fox-background) !important;
 }
 
 .dark-theme .form-checkbox {
@@ -141,13 +157,13 @@ mark {
 }
 
 .external-link {
-  color: var(--cyan);
+  color: var(--fox-color-1);
   text-decoration: none;
-  border-bottom: none;
+  /* border-bottom: none; */
 }
 
 .external-link:hover {
-  color: var(--cyan-hover);
+  color: var(--fox-color-1-darker);
 }
 
 h1.title,
@@ -210,21 +226,74 @@ a.tooltip-priority {
 }
 
 .page-reference .bracket {
-  color: var(--ls-border-color);
+  color: var(--fox-color-1);
   opacity: 0.8;
 }
 
 a.tag {
-  background: var(--purple);
+  background: transparent;
   border-radius: 3px 3px 3px 3px;
   padding: 0px 3px;
-  color: var(--dark-background);
+  color: var(--fox-color-1);
   font-weight: 400;
+  outline: 1px solid var(--fox-color-1);
 }
 
 a.tag:hover {
-  background: transparent;
-  color: (--purple);
+  background: var(--fox-color-1);
+  color: var(--fox-background);
+}
+
+html[data-theme="dark"] .left-sidebar-inner {
+  border-right-color: var(--fox-border);
+  border-right-style: solid;
+  border-right-width: 2px;
+  --ls-quaternary-background-color: var(--fox-border-darker);
+}
+
+html[data-theme="dark"] #right-sidebar-container {
+  border-left-color: var(--fox-border);
+  border-left-style: solid;
+  border-left-width: 2px;
+}
+
+/* Changes all icons to the same color */
+.ti {
+  color: var(--ls-icon-color);
+}
+
+/* Changes sidebar link colors to the same color as the icons */
+.left-sidebar-inner a.item > span {
+  color: var(--ls-icon-color);
+}
+
+.ui__button.bg-indigo-600,
+.ui__toggle .bg-indigo-600 {
+  background-color: var(--fox-color-1);
+  color: var(--fox-background);
+}
+
+.ui__toggle .switcher {
+  background-color: var(--fox-background);
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3e%3cpath d='M7 7l3-3 3 3m0 6l-3 3-3-3' stroke='%23ff55c8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+  /* outline-color: var(--fox-color-1) !important; */
+  border-color: var(--fox-color-1) !important;
+}
+
+.tippy-tooltip,
+.embed-block {
+  outline: 2px solid var(--fox-border);
+}
+
+.block-content {
+  color: var(--fox-color-2);
+}
+
+.arrow-regular {
+  --ls-quaternary-background-color: var(--fox-border);
 }
 
 /*
@@ -242,35 +311,36 @@ a.tag:hover {
 html[data-theme="dark"] .CodeMirror {
   font-family: "FiraCode Nerd Font", "Fire Code", monospace;
   line-height: 1.2;
-  background: var(--background);
+  background: var(--fox-background);
   box-shadow: none;
   -webkit-box-shadow: none;
-  color: var(--white);
+  color: var(--fox-color-2);
+  outline: 2px solid var(--fox-border);
 }
 
 html[data-theme="dark"] .cm-s-default .CodeMirror,
 html[data-theme="dark"] .CodeMirror .CodeMirror-gutters {
   background-color: transparent;
-  color: var(--white) !important;
+  color: var(--fox-color-2) !important;
   border: none;
 }
 
 html[data-theme="dark"] .extensions__code-lang {
-  background: var(--light-background);
+  background: var(--fox-background);
 }
 
 html[data-theme="dark"] .CodeMirror {
-  border: 5px solid var(--light-background);
+  border: 5px solid var(--fox-background);
 }
 
 html[data-theme="dark"] .CodeMirror .CodeMirror-gutters {
-  color: var(--background);
+  color: var(--fox-background);
 }
 html[data-theme="dark"] .CodeMirror .CodeMirror-cursor {
-  border-left: solid thin var(--white);
+  border-left: solid thin var(--fox-color-2);
 }
 html[data-theme="dark"] .CodeMirror .CodeMirror-linenumber {
-  color: var(--comment);
+  color: var(--fox-border);
 }
 html[data-theme="dark"] .CodeMirror .CodeMirror-selected {
   background: rgba(255, 255, 255, 0.1);
@@ -282,24 +352,16 @@ html[data-theme="dark"] .CodeMirror .CodeMirror-line {
 
 html[data-theme="dark"] .CodeMirror .CodeMirror-line::selection,
 html[data-theme="dark"] .CodeMirror .CodeMirror-line > span::selection,
-html[data-theme="dark"]
-  .cm-s-default
-  .CodeMirror-line
-  > span
-  > span::selection {
+html[data-theme="dark"] .cm-s-default .CodeMirror-line > span > span::selection {
   background: rgba(255, 255, 255, 0.1);
 }
 html[data-theme="dark"] .CodeMirror .CodeMirror-line::-moz-selection,
 html[data-theme="dark"] .CodeMirror .CodeMirror-line > span::-moz-selection,
-html[data-theme="dark"]
-  .cm-s-default
-  .CodeMirror-line
-  > span
-  > span::-moz-selection {
+html[data-theme="dark"] .cm-s-default .CodeMirror-line > span > span::-moz-selection {
   background: rgba(255, 255, 255, 0.1);
 }
 html[data-theme="dark"] .CodeMirror span.cm-comment {
-  color: var(--comment);
+  color: var(--fox-color-1-darker);
 }
 html[data-theme="dark"] .CodeMirror span.cm-string,
 html[data-theme="dark"] .CodeMirror span.cm-string-2 {
@@ -312,7 +374,7 @@ html[data-theme="dark"] .CodeMirror span.cm-variable {
   color: var(--green);
 }
 html[data-theme="dark"] .CodeMirror span.cm-variable-2 {
-  color: var(--white);
+  color: var(--fox-color-2);
 }
 html[data-theme="dark"] .CodeMirror span.cm-def {
   color: var(--green);
@@ -327,7 +389,7 @@ html[data-theme="dark"] .CodeMirror span.cm-atom {
   color: var(--purple);
 }
 html[data-theme="dark"] .CodeMirror span.cm-meta {
-  color: var(--white);
+  color: var(--fox-color-2);
 }
 html[data-theme="dark"] .CodeMirror span.cm-tag {
   color: var(--pink);
@@ -354,52 +416,9 @@ html[data-theme="dark"] .CodeMirror .CodeMirror-activeline-background {
 }
 html[data-theme="dark"] .CodeMirror .CodeMirror-matchingbracket {
   text-decoration: underline;
-  color: var(--white) !important;
+  color: var(--fox-color-2) !important;
 }
 
 html[data-theme="dark"] #right-sidebar pre.CodeMirror-line {
   background: transparent;
-}
-
-html[data-theme="dark"] .left-sidebar-inner {
-  border-right-color: var(--foreground);
-  border-right-style: solid;
-  border-right-width: 1px;
-}
-
-html[data-theme="dark"] .left-sidebar-inner {
-  border-right-color: var(--foreground);
-  border-right-style: solid;
-  border-right-width: 1px;
-}
-
-html[data-theme="dark"] #right-sidebar-container {
-  border-left-color: var(--foreground);
-  border-left-style: solid;
-  border-left-width: 1px;
-}
-
-/* Changes all icons to the same color */
-.ti {
-  color: var(--ls-icon-color);
-}
-
-/* Changes sidebar link colors to the same color as the icons */
-.left-sidebar-inner a.item > span {
-  color: var(--ls-icon-color);
-}
-
-.ui__button.bg-indigo-600, .ui__toggle .bg-indigo-600 {
-  background-color: var(--foreground);
-  color: var(--background);
-}
-
-.ui__toggle .switcher {
-  background-color: var(--background);
-}
-
-.form-select {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3e%3cpath d='M7 7l3-3 3 3m0 6l-3 3-3-3' stroke='%23ff55c8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
-  outline-color: var(--white-hover) !important;
-  border-color: var(--foreground) !important;
 }
