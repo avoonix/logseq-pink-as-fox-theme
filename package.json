@@ -1,16 +1,19 @@
 {
     "name": "logseq-pink-as-fox-theme",
+    "version": "1.0.0",
     "description": "Black and pink theme for Logseq.",
     "author": "avoonix",
     "repo": "avoonix/logseq-pink-as-fox-theme",
     "logseq": {
-      "themes": [
-        {
-          "name": "Pink as Fox Theme",
-          "url": "./custom.css",
-          "description": "Black and pink theme for Logseq.",
-          "mode": "dark"
-        }
-     ]
+        "title": "Pink as Fox Theme",
+        "icon": "icon.svg"
+        "themes": [
+            {
+                "name": "Pink as Fox Theme",
+                "url": "./custom.css",
+                "description": "Black and pink theme for Logseq.",
+                "mode": "dark"
+            }
+        ]
     }
-  }
+}
