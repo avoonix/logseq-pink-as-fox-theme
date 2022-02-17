@@ -6,7 +6,7 @@
     "repo": "avoonix/logseq-pink-as-fox-theme",
     "logseq": {
         "title": "Pink as Fox Theme",
-        "icon": "icon.svg"
+        "icon": "icon.svg",
         "themes": [
             {
                 "name": "Pink as Fox Theme",
