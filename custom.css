@@ -115,6 +115,10 @@ html[data-theme="dark"] {
   --color-level-5: var(--ls-quinary-background-color);
 }
 
+.color-level {
+  outline: 1px solid var(--fox-border);
+}
+
 html,
 body {
   font-weight: var(--ls-font-weight);
@@ -226,7 +230,7 @@ a.tooltip-priority {
 }
 
 .page-reference .bracket {
-  color: var(--fox-color-1);
+  color: var(--fox-border);
   opacity: 0.8;
 }
 
@@ -294,6 +298,15 @@ html[data-theme="dark"] #right-sidebar-container {
 
 .arrow-regular {
   --ls-quaternary-background-color: var(--fox-border);
+}
+
+#left-sidebar .page-icon {
+  color: var(--fox-color-1)
+}
+
+.add-button-link-wrap:hover .add-button-link {
+  opacity: 1;
+  transform: initial;
 }
 
 /*
