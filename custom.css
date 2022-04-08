@@ -25,6 +25,8 @@
   --fox-color-2-lighter: hsl(var(--fox-hs-2), calc(var(--fox-l-2) + 10%));
   --fox-color-2: hsl(var(--fox-hs-2), var(--fox-l-2));
   --fox-color-2-darker: hsl(var(--fox-hs-2), calc(var(--fox-l-2) - 10%));
+  
+  --fox-shadow: hsla(var(--fox-hs-1), calc(var(--fox-l-1) - 50%), 0.2);
 
   /* misc */
   --red: #ff5555;
@@ -292,6 +294,14 @@ html[data-theme="dark"] #right-sidebar-container {
   outline: 2px solid var(--fox-border);
 }
 
+.ls-block.shadow-xl { /* card */
+  border: 1px solid var(--fox-border);
+  --tw-shadow: 0 20px 25px -5px var(--fox-shadow),0 10px 10px -5px var(--fox-shadow);
+  margin-left: 8px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
 .block-content {
   color: var(--fox-color-2);
 }
@@ -301,7 +311,7 @@ html[data-theme="dark"] #right-sidebar-container {
 }
 
 #left-sidebar .page-icon {
-  color: var(--fox-color-1)
+  color: var(--fox-color-1);
 }
 
 .add-button-link-wrap:hover .add-button-link {
