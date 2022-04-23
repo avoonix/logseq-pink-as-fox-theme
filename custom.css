@@ -115,6 +115,8 @@ html[data-theme="dark"] {
   --color-level-3: var(--ls-quaternary-background-color);
   --color-level-4: var(--ls-tertiary-background-color);
   --color-level-5: var(--ls-quinary-background-color);
+
+  --ls-cloze-text-color: var(--fox-color-1);
 }
 
 .color-level {
@@ -317,6 +319,10 @@ html[data-theme="dark"] #right-sidebar-container {
 .add-button-link-wrap:hover .add-button-link {
   opacity: 1;
   transform: initial;
+}
+
+.form-checkbox {
+  border: 1px solid var(--fox-color-1) !important;
 }
 
 /*
