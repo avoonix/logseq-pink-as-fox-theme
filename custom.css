@@ -326,6 +326,17 @@ html[data-theme="dark"] .block-properties {
   border: 2px dashed var(--fox-border);
 }
 
+/* progress bar */
+html[data-theme="dark"] #main-content-container .rounded-full.bg-indigo-200 {
+  outline: 1px solid var(--fox-color-1);
+  background-color: var(--fox-background);
+}
+html[data-theme="dark"] #main-content-container .rounded-full.bg-indigo-200 .bg-indigo-600 {
+  background-color: var(--fox-color-1);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 /*
 
     Name:       Dracula for CodeMirror
