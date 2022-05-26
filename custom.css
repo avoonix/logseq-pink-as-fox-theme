@@ -320,6 +320,7 @@ html[data-theme="dark"] .add-button-link-wrap:hover .add-button-link {
 html[data-theme="dark"] .form-checkbox {
   border: 1px solid var(--fox-color-1) !important;
   border-radius: var(--ls-border-radius-low);
+  cursor: pointer;
 }
 
 html[data-theme="dark"] .block-properties {
@@ -335,6 +336,10 @@ html[data-theme="dark"] #main-content-container .rounded-full.bg-indigo-200 .bg-
   background-color: var(--fox-color-1);
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+html[data-theme="dark"] .blocks-container p {
+  color: var(--fox-color-2); /* checkbox list, ... */
 }
 
 /*
