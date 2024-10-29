@@ -54,6 +54,7 @@ html[data-theme="dark"] {
   --ls-tertiary-background-color: var(--fox-background);
   --ls-quaternary-background-color: var(--fox-background);
   --ls-quinary-background-color: var(--fox-background);
+  --popover: var(--fox-background);
 
   --ls-active-primary-color: var(--fox-color-1);
   --ls-active-secondary-color: var(--fox-color-1);
@@ -72,10 +73,13 @@ html[data-theme="dark"] {
 
   --ls-link-text-color: var(--fox-color-1);
   --ls-link-text-hover-color: var(--fox-color-1-darker);
+  --lx-accent-11: var(--fox-color-1);
 
   --ls-link-ref-text-color: var(--fox-color-1);
   --ls-link-ref-text-hover-color: var(--fox-color-1-darker);
   --ls-block-ref-link-text-color: var(--ls-border-color);
+  --border: var(--fox-border-darker);
+  --lx-accent-01: var(--fox-border);
 
   --ls-tag-text-color: var(--fox-color-1);
   --ls-tag-text-hover-color: var(--fox-color-1-lighter);
@@ -131,6 +135,11 @@ html[data-theme="dark"] body {
 
 html[data-theme="dark"] i {
   color: var(--fox-color-2-darker);
+}
+
+html[data-theme="dark"] .menu-links-wrapper {
+  background-color: var(--fox-background);
+  border-color: var(--fox-border-lighter);
 }
 
 html[data-theme="dark"] b {
@@ -273,6 +282,7 @@ html[data-theme="dark"] .left-sidebar-inner a.item > span {
 }
 
 html[data-theme="dark"] .ui__button.bg-indigo-600,
+html[data-theme="dark"] .ui__button.bg-primary\/90,
 html[data-theme="dark"] .ui__toggle .bg-indigo-600 {
   background-color: var(--fox-color-1);
   color: var(--fox-background);
@@ -346,6 +356,20 @@ html[data-theme="dark"] .blocks-container p {
 html[data-theme="dark"] .results-count {
   color: var(--fox-color-2);
   opacity: 1;
+}
+
+/* custom queries */
+div.block-body .custom-query > div > div.content > div.foldable-title > div.flex.flex-row.items-center
+{
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+div.block-body .custom-query > div > div.content > div.foldable-title > div.flex.flex-row.items-center .block-control
+{
+  margin-left: 0 !important;
+}
+div.block-body .custom-query {
+  margin-top: 0;
 }
 
 .page-reference[data-ref=card], a[data-ref=card] {
